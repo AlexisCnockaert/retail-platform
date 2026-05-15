@@ -1,0 +1,16 @@
+# Profil activé en production (Cloud Run)
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS}
+
+server:
+  forward-headers-strategy: framework
+
+logging:
+  level:
+    com.retail: INFO
+    org.springframework.kafka: WARN
